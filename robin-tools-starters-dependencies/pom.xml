@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.com.mockingbird</groupId>
+    <artifactId>robin-tools-starters-dependencies</artifactId>
+    <version>1.0.0</version>
+
+    <packaging>pom</packaging>
+
+    <name>开发工具集 - Starters - 依赖管理组件</name>
+    <description>robin-tools-starters-dependencies</description>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <robin-banner-spring-boot-starter.version>1.0.0</robin-banner-spring-boot-starter.version>
+        <robin-web-spring-boot-starter.version>1.0.0</robin-web-spring-boot-starter.version>
+        <robin-mybatis-spring-boot-starter.version>1.0.0</robin-mybatis-spring-boot-starter.version>
+        <robin-redis-spring-boot-starter.version>1.0.0</robin-redis-spring-boot-starter.version>
+        <robin-cache-spring-boot-starter.version>1.0.0</robin-cache-spring-boot-starter.version>
+        <robin-influxdb-spring-boot-starter.version>1.0.0</robin-influxdb-spring-boot-starter.version>
+        <robin-integration-spring-boot-starter.version>1.0.0</robin-integration-spring-boot-starter.version>
+        <robin-dynamic-datasource-spring-boot-starter.version>1.0.0</robin-dynamic-datasource-spring-boot-starter.version>
+        <robin-api-security-spring-boot-starter.version>1.0.0</robin-api-security-spring-boot-starter.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-banner-spring-boot-starter</artifactId>
+                <version>${robin-banner-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-web-spring-boot-starter</artifactId>
+                <version>${robin-web-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-mybatis-spring-boot-starter</artifactId>
+                <version>${robin-mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-redis-spring-boot-starter</artifactId>
+                <version>${robin-redis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-cache-spring-boot-starter</artifactId>
+                <version>${robin-cache-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-influxdb-spring-boot-starter</artifactId>
+                <version>${robin-influxdb-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-integration-spring-boot-starter</artifactId>
+                <version>${robin-integration-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${robin-dynamic-datasource-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-api-security-spring-boot-starter</artifactId>
+                <version>${robin-api-security-spring-boot-starter.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
