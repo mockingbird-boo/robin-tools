@@ -27,6 +27,7 @@
         <robin-integration-spring-boot-starter.version>1.0.0</robin-integration-spring-boot-starter.version>
         <robin-dynamic-datasource-spring-boot-starter.version>1.0.0</robin-dynamic-datasource-spring-boot-starter.version>
         <robin-api-security-spring-boot-starter.version>1.0.0</robin-api-security-spring-boot-starter.version>
+        <robin-mqtt-spring-boot-starter.version>1.0.0</robin-mqtt-spring-boot-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -75,6 +76,11 @@
                 <groupId>cn.com.mockingbird</groupId>
                 <artifactId>robin-api-security-spring-boot-starter</artifactId>
                 <version>${robin-api-security-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.com.mockingbird</groupId>
+                <artifactId>robin-mqtt-spring-boot-starter</artifactId>
+                <version>${robin-mqtt-spring-boot-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
