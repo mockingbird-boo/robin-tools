@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: robin-starter-quartz
+  profiles:
+    active: dev
+  datasource:
+    url: 'jdbc:mysql://192.168.10.101:3306/robin_quartz_jobs?useUnicode=true&useSSL=false'
+    username: developer
+    password: Dev!1234
+    type: com.zaxxer.hikari.HikariDataSource
+  #    driver-class-name: com.mysql.cj.jdbc.Driver
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org:
+        quartz:
+          # 调度器配置
+          scheduler:
+            instanceName: clusteredScheduler
+            instanceId: AUTO
+          # 存储配置
+          jobStore:
+            class: org.springframework.scheduling.quartz.LocalDataSourceJobStore
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: true
+            clusterCheckinInterval: 10000
+            useProperties: false
+          # 线程池配置
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+    auto-startup: true
+    jdbc:
+      initialize-schema: never
+
+server:
+  port: 8081
+logging:
+  level:
+    cn.com.mockingbird.robin.quartz: debug
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
