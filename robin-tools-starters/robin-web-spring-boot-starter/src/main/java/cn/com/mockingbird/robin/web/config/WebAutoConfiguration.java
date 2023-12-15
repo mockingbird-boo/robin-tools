@@ -2,7 +2,7 @@ package cn.com.mockingbird.robin.web.config;
 
 import cn.com.mockingbird.robin.common.constant.Standard;
 import cn.com.mockingbird.robin.web.context.SpringApplicationContext;
-import cn.com.mockingbird.robin.web.feign.FeignRequestInterceptor;
+import cn.com.mockingbird.robin.web.trace.log.FeignRequestInterceptor;
 import cn.com.mockingbird.robin.web.mvc.InitBinderAdvice;
 import cn.com.mockingbird.robin.web.mvc.ResponseDataAdvice;
 import cn.com.mockingbird.robin.web.mvc.UniformExceptionHandler;
@@ -70,6 +70,7 @@ public class WebAutoConfiguration {
 
     @Bean
     @ConditionalOnClass(RequestInterceptor.class)
+    @ConditionalOnProperty(name = "spring.web.request.trace.enable", havingValue = "true", matchIfMissing = true)
     public FeignRequestInterceptor feignRequestInterceptor() {
         return new FeignRequestInterceptor();
     }

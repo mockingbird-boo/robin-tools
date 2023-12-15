@@ -1,8 +1,7 @@
-package cn.com.mockingbird.robin.web.feign;
+package cn.com.mockingbird.robin.web.trace.log;
 
 import cn.com.mockingbird.robin.common.constant.Standard;
 import cn.com.mockingbird.robin.common.util.request.RequestUtils;
-import cn.com.mockingbird.robin.web.trace.log.MDCUtils;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import jakarta.servlet.http.HttpServletRequest;
