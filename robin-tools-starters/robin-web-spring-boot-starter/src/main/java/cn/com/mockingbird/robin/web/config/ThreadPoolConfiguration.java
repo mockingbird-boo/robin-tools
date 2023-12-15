@@ -31,7 +31,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 @EnableConfigurationProperties(ThreadPoolProperties.class)
 public class ThreadPoolConfiguration implements AsyncConfigurer {
 
-
     private final ThreadPoolProperties threadPoolProperties;
 
     public ThreadPoolConfiguration(ThreadPoolProperties threadPoolProperties) {
