@@ -15,6 +15,7 @@
         <module>robin-tools-common</module>
         <module>robin-tools-starters</module>
         <module>robin-tools-test-applications</module>
+        <module>robin-tools-applications</module>
     </modules>
 
     <properties>
