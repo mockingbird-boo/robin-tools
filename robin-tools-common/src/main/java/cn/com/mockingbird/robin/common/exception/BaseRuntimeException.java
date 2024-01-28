@@ -1,5 +1,6 @@
 package cn.com.mockingbird.robin.common.exception;
 
+import cn.com.mockingbird.robin.common.util.response.ResponseCode;
 import lombok.Getter;
 
 /**
@@ -12,7 +13,10 @@ import lombok.Getter;
 @SuppressWarnings({"unused"})
 public abstract class BaseRuntimeException extends RuntimeException {
 
-    private int code = 500;
+    /**
+     * 500，服务器处理失败
+     */
+    private int code = ResponseCode.FAIL.getCode();
 
     public BaseRuntimeException(int code, String message) {
         super(message);
