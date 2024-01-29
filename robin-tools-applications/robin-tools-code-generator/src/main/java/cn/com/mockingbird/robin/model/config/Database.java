@@ -1,6 +1,5 @@
 package cn.com.mockingbird.robin.model.config;
 
-import cn.com.mockingbird.robin.common.DatabaseType;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -15,17 +14,7 @@ import lombok.experimental.Accessors;
 public class Database {
 
     /**
-     * 连接名
-     */
-    private String name;
-
-    /**
-     * 数据库类型
-     */
-    private DatabaseType databaseType;
-
-    /**
-     * 数据库服务器地址
+     * 数据库连接地址
      */
     private String url;
 
@@ -40,8 +29,8 @@ public class Database {
     private String password;
 
     /**
-     * 数据库
+     * schema
      */
-    private String database;
+    private String schema;
 
 }

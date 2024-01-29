@@ -1,7 +1,7 @@
 package cn.com.mockingbird.robin.model;
 
-import cn.com.mockingbird.robin.model.config.*;
 import cn.com.mockingbird.robin.model.config.Package;
+import cn.com.mockingbird.robin.model.config.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -26,11 +26,6 @@ public class GeneratorParam {
     private Database database;
 
     /**
-     * 可选配置
-     */
-    private Optional optional;
-
-    /**
      * 数据表配置
      */
     private Table table;
@@ -41,27 +36,23 @@ public class GeneratorParam {
     private Package pkg;
 
     /**
-     * 文件名配置
-     */
-    private File file;
-
-    /**
-     * 字段名配置
-     */
-    private Field field;
-
-    /**
-     * 实体类配置
+     * 实体策略配置
      */
     private Entity entity;
 
     /**
-     * XML 文件配置
+     * Controller 策略配置
      */
-    private Xml xml;
+    private Controller controller;
 
     /**
-     * 其他配置
+     * Service 策略配置
      */
-    private Other other;
+    private Service service;
+
+    /**
+     * Mapper 策略配置
+     */
+    private Mapper mapper;
+
 }

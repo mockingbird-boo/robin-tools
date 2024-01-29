@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
- * 包名配置
+ * 包配置
  *
  * @author zhao peng
  * @date 2024/1/22 15:40
@@ -14,14 +14,19 @@ import lombok.experimental.Accessors;
 public class Package {
 
     /**
+     * 父包名
+     */
+    private String parent;
+
+    /**
+     * 父包模块名
+     */
+    private String module;
+
+    /**
      * 实体包名
      */
     private String entity;
-
-    /**
-     * Mapper 接口包名
-     */
-    private String mapper;
 
     /**
      * Service 接口包名
@@ -34,13 +39,17 @@ public class Package {
     private String serviceImpl;
 
     /**
-     * Controller 包名
+     * Mapper 接口包名
      */
-    private String controller;
+    private String mapper;
 
     /**
      * Mapper XML 包（文件目录）名
      */
     private String xml;
 
+    /**
+     * Controller 包名
+     */
+    private String controller;
 }

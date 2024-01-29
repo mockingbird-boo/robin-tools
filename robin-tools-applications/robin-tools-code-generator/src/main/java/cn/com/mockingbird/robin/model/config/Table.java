@@ -14,24 +14,19 @@ import lombok.experimental.Accessors;
 public class Table {
 
     /**
-     * 表名
+     * 表匹配
      */
     private String[] tables;
 
     /**
-     * 忽略的数据列
-     */
-    private String[] ignoredColumns;
-
-    /**
-     * 数据表前缀
+     * 过滤表前缀
      */
     private String[] tablePrefixes;
 
     /**
-     * 数据列前缀
+     * 过滤字段前缀
      */
-    private String[] columnPrefixes;
+    private String[] fieldPrefixes;
 
     /**
      * 排除的数据表名
