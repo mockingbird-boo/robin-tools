@@ -40,23 +40,39 @@
 <body>
 <section class="home-bg"></section>
 <div class="layui-container">
-
     <div class="header">
-        <a target="_blank" href="https://fengwenyi.com?fs=mpcg">
-            <img class="logo" src="/static/images/logo.jpg" alt="logo"/>
+        <a target="_self" href="#">
+            <img class="logo" src="/static/images/logo.png" alt="logo"/>
         </a>
         <h1 class="title">可视化代码生成器</h1>
     </div>
-
-    <!--<div class="layui-progress" style="margin: 15px 0 30px;">
+    <div class="layui-progress" style="margin: 15px 0 15px;">
         <div class="layui-progress-bar" lay-percent="100%"></div>
-    </div>-->
+    </div>
 
     <form class="layui-form" action="" lay-filter="formFull">
 
         <div class="main-panel">
             <div class="main-left-panel">
                 <blockquote class="layui-elem-quote"><span class="red-star">*</span>全局配置</blockquote>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">作者</label>
+                    <div class="layui-input-block">
+                        <label>
+                            <input type="text" name="global.author" placeholder="请输入作者"
+                                   autocomplete="off" class="layui-input"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文件输出目录</label>
+                    <div class="layui-input-block">
+                        <label>
+                            <input type="text" name="global.outputDirectory" placeholder="请输入文件输出目录"
+                                   autocomplete="off" class="layui-input"/>
+                        </label>
+                    </div>
+                </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label"><span class="red-star">*</span>包名</label>
                     <div class="layui-input-block">
@@ -515,13 +531,15 @@
     </div>
 
     <footer class="footer">
-        <div class="version">v<span th:text="${ version }"></span> <button id="btnUpgrade" type="button" class="layui-btn layui-btn-primary btn-upgrade">检查更新</button></div>
+        <!--<div class="version">v<span th:text="${version}"/>
+            <button id="btnUpgrade" type="button" class="layui-btn layui-btn-primary btn-upgrade">检查更新</button>
+        </div>
         <div class="box-links">
             <a target="_blank" href="https://github.com/fengwenyi/mybatis-plus-code-generator">源码</a>
-        </div>
+        </div>-->
         <hr />
         <div class="box-copyright">
-            Copyright &copy;2022 <a target="_blank" href="https://fengwenyi.com?fs=mpcg">Erwin Feng</a>
+            Copyright &copy;<span th:text="${year}"/>
         </div>
     </footer>
 </div>

@@ -241,7 +241,6 @@ layui.use(function() {
             }
         });
         return false;
-
     }
 
     // form 数据缓存

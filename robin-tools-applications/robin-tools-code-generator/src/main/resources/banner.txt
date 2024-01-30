@@ -1,0 +1,5 @@
+.-. .-. .-. .-.   .-. .-. . . .-. .-. .-. .-. .-. .-.
+|   | | |  )|-    |.. |-  |\| |-  |(  |-|  |  | | |(
+`-' `-' `-' `-'   `-' `-' ' ` `-' ' ' ` '  '  `-' ' '
+Application Name: ${spring.application.name}
+Spring Boot Version: v${spring-boot.version}
